@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { db } from './firebase'
 import { collection, getDocs, addDoc } from 'firebase/firestore'
-import "./SetUsers.css"
+import './Styles/SetUsers.css'
 
 function SetUsers() {
 

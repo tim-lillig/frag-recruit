@@ -9,6 +9,7 @@ import Navbar from './Components/Navbar';
 import ProfilePage from './Components/ProfilePage';
 import film from './Components/film';
 import aboutuser from './Components/aboutuser';
+import SetUsers from './Components/SetUsers';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Route path="/profile" component={ProfilePage} />
       <Route path="/profile/film" component={film} />
       <Route path="/profile/about" component={aboutuser} />
+      <Route path="/signup" component={SetUsers} />
     </div>
   );
 }
