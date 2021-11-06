@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+
+.topnav {
+  overflow: hidden;
+}
+
+.topnav a {
+  color: black;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+  font-size: 27px;
+  background: transparent;
+}
+
+.topnav b {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 30px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: 'Share Tech', sans-serif;
+  background: transparent;
+}
+
+.logo1 {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 13px 18px;
+  height: 60px;
+  background: transparent;
+}
+
+.avatar-class {
+  float: right;
+  text-align: center;
+  padding: 16px 25px;
+  height: 50px;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.grenade-img {
+  height: 100%;
+  position: relative;
+  height: 3vw;
+  padding: 0vw 1vw;
+}

@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+
+/* The side navigation menu */
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: white;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    margin: 0;
+    font-family: 'Share Tech', sans-serif;
+    padding-left: 10px;
+  }
+  
+  /* Sidebar links */
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  /* Active/current link */
+  .sidebar a.active {
+    background-color: darkred;
+    color: white;
+  }
+  
+  /* Links on mouse-over */
+  .sidebar a:hover:not(.active) {
+    background-color: grey;
+    color: white;
+  }
+  
+  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+  div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+  
+  /* On screens that are less than 700px wide, make the sidebar into a topbar */
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+  }
+
+.scream-img {
+    position: relative;
+    height: 100%;
+    height: 10vw;
+    border-radius: 50%;
+    border: solid black 2px;
+}
+
+.username {
+    font-family: 'Share Tech', sans-serif;
+    margin: 0;
+    padding-top: 5px;
+}
+
+.bio {
+    font-weight: lighter;
+    font-family: 'Share Tech', sans-serif;
+    font-size: 1vw;
+    margin: 0;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: solid black 2px;
+}

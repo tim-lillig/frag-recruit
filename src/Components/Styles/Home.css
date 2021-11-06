@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+
+  * { 
+    background-color: white;
+  }
+
+  .container {
+    position: relative;
+    display:inline-block;
+    width: auto;
+    display: grid;
+    height: 100%;
+  }
+  
+  /* Bottom right text */
+  .text-block {
+    position: absolute;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    color: black;
+    font-family: 'Share Tech', sans-serif;
+    font-size: 1vw;
+    text-align:left;
+    padding-left: 0;
+    left:5rem; top:1.25rem;
+    height: 100%;
+    font-weight: bolder;
+  }
+
+ .paragraph {
+   color: black;
+   font-weight: lighter;
+ }
+
+  .home-btn {
+  background-color: darkred;
+  color: white;
+  padding: .5vw 1vw;
+  text-align: center;
+  font-size: 2vw;
+  font-family: 'Share Tech', sans-serif;
+  position: relative;
+  left:0vw; top:1vw;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: none;
+  border-radius: 8px;
+  }
+
+  .home-btn2 {
+    background-color: darkred;
+  color: white;
+  padding: .5vw 1vw;
+  text-align: center;
+  font-size: 2vw;
+  font-family: 'Share Tech', sans-serif;
+  position: relative;
+  left:3vw; top:1vw;
+  border: none;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    .home-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .logo-img {
+      position: relative;
+      left: 45vw;
+      bottom: 25vw;
+      height: 100%;
+      height: 30vw;
+    }
+
+    .celebration-img {
+      position: relative;
+      height: 25vw;
+      bottom:40vw;
+      left: 49vw;
+    }
