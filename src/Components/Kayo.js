@@ -1,6 +1,7 @@
 import React from 'react';
 import ProfileCard from './ProfileCard';
 import { Route, Link } from 'react-router-dom';
+import GetUsers from './GetUsers';
 
 
 function Kayo() {

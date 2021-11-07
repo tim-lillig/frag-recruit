@@ -8,6 +8,7 @@ import {
   signOut,
 } from "firebase/auth";
 import { auth } from './firebase.js'
+import { Link } from 'react-router-dom'
 
 function RegisterUser() {
 
@@ -52,7 +53,7 @@ function RegisterUser() {
           }}
         />
 
-        <button onClick={register}>Register</button>
+        <Link to="/register-info"><button onClick={register}>Register</button></Link>
       </div>        
     </div>
   );

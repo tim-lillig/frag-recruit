@@ -11,6 +11,7 @@ import film from './Components/film';
 import aboutuser from './Components/aboutuser';
 import SetUsers from './Components/SetUsers';
 import RegisterUser from './Components/RegisterUser';
+import GetUsers from './Components/GetUsers';
 
 function App() {
   return (
@@ -23,8 +24,9 @@ function App() {
       <Route path="/profile" component={ProfilePage} />
       <Route path="/profile/film" component={film} />
       <Route path="/profile/about" component={aboutuser} />
-      <Route path="/signup" component={SetUsers} />
-      <Route path="/registeruser" component={RegisterUser} />
+      <Route path="/register-info" component={SetUsers} />
+      <Route path="/register" component={RegisterUser} />
+      <Route path="/users" component={GetUsers} />
     </div>
   );
 }

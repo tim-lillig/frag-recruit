@@ -16,10 +16,6 @@ function SetUsers() {
     const [newRole, setNewRole] = useState("");
     const [newBio, setNewBio] = useState("");
 
-    function refreshPage() {
-        window.location.reload(false);
-      }
-
     const createUser = async () =>  {
         await addDoc(userCollectionRef, {
             name: newName,
