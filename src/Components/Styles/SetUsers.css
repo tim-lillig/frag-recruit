@@ -2,9 +2,9 @@
 
 input {
     width: 10%;
-    padding: 16px 30px;
+    padding: 1.5vw 2vw;
     border: none;
-    border-radius: 4px;
+    border-radius: 1vw;
     background-color: #f1f1f1;
     font-family: 'Share Tech', sans-serif;
     display: inline-block;
@@ -15,12 +15,12 @@ input {
 
   label {
     font-family: 'Share Tech', sans-serif;
-    padding: 16px 30px;
-    font-size: 20px;
+    padding: 1vw 3vw;
+    font-size: 2vw;
     display: inline-block;
     float: left;
     clear: left;
-    width: 250px;
+    width: 17vw;
     text-align: right;
     background: transparent;
     position: relative;
@@ -30,8 +30,8 @@ input {
   .btn {
     background-color: darkred;
     color: white;
-    padding: 14px 30px;
-    margin: 8px 0;
+    padding: 1vw 2vw;
+    margin: 2vw 0;
     border: none;
     cursor: pointer;
     width: 10%;
@@ -43,7 +43,7 @@ input {
 
   .bio-input {
     width: 10%;
-    padding: 60px 30px;
+    padding: 3vw 2vw;
     border: none;
     border-radius: 4px;
     background-color: #f1f1f1;
@@ -52,6 +52,17 @@ input {
     float: left;
     position: relative;
     left: 20vw;
-    height: 20px;
+    height: 2vw;
     vertical-align: top;
+  }
+
+  .logo-img1 {
+    position: relative;
+    height: 3vw;
+  }
+
+  .register-heading {
+    font-family: 'Share Tech', sans-serif;
+    font-weight: bolder;
+    font-size: 2vw;
   }

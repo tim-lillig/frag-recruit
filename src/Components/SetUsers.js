@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import { db } from './firebase'
 import { collection, getDocs, addDoc } from 'firebase/firestore'
 import './Styles/SetUsers.css'
+import logo from "./Images/logo.png"
+import { Link } from 'react-router-dom';
 
 function SetUsers() {
 
@@ -14,22 +16,24 @@ function SetUsers() {
     const [newRole, setNewRole] = useState("");
     const [newBio, setNewBio] = useState("");
 
+    function refreshPage() {
+        window.location.reload(false);
+      }
+
     const createUser = async () =>  {
         await addDoc(userCollectionRef, {
             name: newName,
             experience: newExperience,
             game: newGame,
             role: newRole,
-            bio: newBio
+            bio: newBio,
         })
     }
 
-    const onClick= () => {
-        createUser();
-     }
-
     return (
         <div className="myform">
+            <img src={logo} alt="logo" className="logo-img1" />
+            <h1 className="register-heading">Register</h1>
             <div className="myform">
             <label for="myform">Name </label>
             <input placeholder="Name..." onChange={(event) => {setNewName(event.target.value)}}/>
@@ -56,7 +60,7 @@ function SetUsers() {
             </div>
             <br></br>
             <div>
-            <button className="btn" onClick={onClick}> Create Account </button>
+            <Link to="/login"><button className="btn" onClick={createUser}> Create Account </button></Link>
             </div>
         </div>
     )
