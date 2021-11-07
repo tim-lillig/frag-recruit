@@ -22,19 +22,6 @@ function Login() {
     setUser(currentUser);
   });
 
-  const register = async () => {
-    try {
-      const user = await createUserWithEmailAndPassword(
-        auth,
-        registerEmail,
-        registerPassword
-      );
-      console.log(user);
-    } catch (error) {
-      console.log(error.message);
-    }
-  };
-
   const login = async () => {
     try {
       const user = await signInWithEmailAndPassword(
@@ -54,24 +41,6 @@ function Login() {
 
   return (
     <div className="App">
-      <div>
-        <h3> Register User </h3>
-        <input
-          placeholder="Email..."
-          onChange={(event) => {
-            setRegisterEmail(event.target.value);
-          }}
-        />
-        <input
-          placeholder="Password..."
-          onChange={(event) => {
-            setRegisterPassword(event.target.value);
-          }}
-        />
-
-        <button onClick={register}> Create User</button>
-      </div>
-
       <div>
         <h3> Login </h3>
         <input

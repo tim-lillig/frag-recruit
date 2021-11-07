@@ -10,6 +10,7 @@ import ProfilePage from './Components/ProfilePage';
 import film from './Components/film';
 import aboutuser from './Components/aboutuser';
 import SetUsers from './Components/SetUsers';
+import RegisterUser from './Components/RegisterUser';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Route path="/profile/film" component={film} />
       <Route path="/profile/about" component={aboutuser} />
       <Route path="/signup" component={SetUsers} />
+      <Route path="/registeruser" component={RegisterUser} />
     </div>
   );
 }
