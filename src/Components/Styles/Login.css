@@ -45,7 +45,9 @@
   font-family: 'Share Tech', sans-serif;
 }
 .loginbutton{
-  background-color:white;
+  background-color:#121212;
+  border-color: #F03A47;
+  color: white;
   border-radius: 15px;
   font-family: 'Share Tech', sans-serif;
   height: 30px;
