@@ -6,6 +6,7 @@
   width:750px;
   height:300px;
   border: 5px;
+  border-radius: 15px;
   align-items: center;
   border-style: solid;
   border-color: #F03A47;
@@ -36,7 +37,7 @@
 .emailandpass{
   color: white;
   text-align: right;
-  margin-right: 250px;
+  margin-right: 270px;
   font-family: 'Share Tech', sans-serif;
 }
 
