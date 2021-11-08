@@ -9,6 +9,7 @@ import {
 } from "firebase/auth";
 import { auth } from './firebase.js'
 import { Link } from 'react-router-dom'
+import './Styles/RegisterUser.css'
 
 function RegisterUser() {
 
@@ -37,23 +38,22 @@ function RegisterUser() {
   };
   
   return (
-    <div className="App">
+    <div className="register-box">
       <div>
-        <h3> Register User </h3>
-        <input
-          placeholder="Email..."
+        <h3 className="register-text"> Register User </h3>
+        <h4 className = "emailandpass"> Email: <input className = "email"
           onChange={(event) => {
             setRegisterEmail(event.target.value);
           }}
         />
-        <input
-          placeholder="Password..."
+        </h4>
+        <h4 className = "emailandpass"> Password: <input className = "pass"
           onChange={(event) => {
             setRegisterPassword(event.target.value);
           }}
         />
-
-        <Link to="/register-info"><button onClick={register}>Register</button></Link>
+        </h4>
+        <Link to="/register-info"><button className = "loginbutton" onClick={register}>Register</button></Link>
       </div>        
     </div>
   );
