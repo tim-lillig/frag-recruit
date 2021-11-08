@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Route } from 'react-router-dom'
-import { useState } from "react";
+import { useState, Redirect } from "react";
 import { Link } from 'react-router-dom';
 import {
   createUserWithEmailAndPassword,
@@ -10,6 +10,7 @@ import {
 } from "firebase/auth";
 import { auth } from './firebase.js'
 import './Styles/Login.css'
+import RegisterUser from './RegisterUser'
 
 function Login() {
 
@@ -18,13 +19,17 @@ function Login() {
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
 
+  const [loggedIn, setLoggedIn] = useState(false);
+
   const [user, setUser] = useState({});
 
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
   });
 
+
   const login = async () => {
+    
     try {
       const user = await signInWithEmailAndPassword(
         auth,
@@ -40,6 +45,12 @@ function Login() {
   const logout = async () => {
     await signOut(auth);
   };
+
+  useEffect(() => {
+    if (user) {
+      setLoggedIn(true);
+    }
+  }, [user]);
 
   return (
     <div>
@@ -71,6 +82,6 @@ function Login() {
       <button onClick={logout}> Sign Out </button>
     </div>
   );
-}
+        }
 
 export default Login
