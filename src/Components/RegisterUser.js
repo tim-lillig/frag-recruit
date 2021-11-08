@@ -10,10 +10,7 @@ import {
 import { auth } from './firebase.js'
 import { Link } from 'react-router-dom'
 import './Styles/RegisterUser.css'
-<<<<<<< HEAD
 import Home from './Home.js'
-=======
->>>>>>> 53e7d5c40001b12a1df30d50b02ee30d50050e06
 
 function RegisterUser() {
 
