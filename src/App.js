@@ -6,7 +6,7 @@ import Contact from './Components/Contact.js';
 import Login from './Components/Login';
 import { Route, Link } from 'react-router-dom';
 import Navbar from './Components/Navbar';
-import ProfilePage from './Components/ProfilePage';
+import ProfilePage from './Components/Profile';
 import film from './Components/film';
 import aboutuser from './Components/aboutuser';
 import SetUsers from './Components/SetUsers';
