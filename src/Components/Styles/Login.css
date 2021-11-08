@@ -62,3 +62,13 @@
 .registerbutton{
   color: #F03A47;
 }
+
+.user-li {
+  color: white;
+  font-family: 'Share Tech', sans-serif;
+}
+
+.sign-out {
+  color: white;
+  font-family: 'Share Tech', sans-serif;
+}

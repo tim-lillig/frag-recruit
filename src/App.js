@@ -13,6 +13,8 @@ import SetUsers from './Components/SetUsers';
 import RegisterUser from './Components/RegisterUser';
 import GetUsers from './Components/GetUsers';
 import Testing from './Components/testing';
+import Profile from './Components/Profile';
+import Friends from './Components/Friends';
 
 function App() {
   return (
@@ -25,8 +27,9 @@ function App() {
       <Route path="/contact" component={Contact} />
       <Route path="/login" component={Login} />
       <Route path="/profile" component={ProfilePage} />
-      <Route path="/profile/film" component={film} />
-      <Route path="/profile/about" component={aboutuser} />
+      <Route path="/profile-film" component={film} />
+      <Route path="/profile-about" component={Profile} />
+      <Route path="/profile-friends" component={Friends} />
       <Route path="/register-info" component={SetUsers} />
       <Route path="/register" component={RegisterUser} />
       <Route path="/users" component={GetUsers} />

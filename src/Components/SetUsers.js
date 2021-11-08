@@ -13,34 +13,18 @@ function SetUsers() {
     const [id, setId] = useState("");
 
     const auth = getAuth();
-
-    useEffect(() => {
-        onAuthStateChanged(auth, (user) => {
-            if (user) {
-                // User is signed in, see docs for a list of available properties
-                // https://firebase.google.com/docs/reference/js/firebase.User
-                const uid = user.uid;
-                console.log(uid);
-                setId(uid);
-            }
-            });
-            
-    }, [])
-
-    console.log(id);
-
-    const userRef = doc(db, "users", id)
-
-    const userCollectionRef = collection(db, "users")
-
     const [newName, setNewName] = useState("");
     const [newExperience, setNewExperience] = useState(0);
     const [newGame, setNewGame] = useState("");
     const [newRole, setNewRole] = useState("");
     const [newBio, setNewBio] = useState("");
 
+    const user = auth.currentUser;
+
     const createUser = async () =>  {
-        await setDoc(userRef, {
+        const uid = user.uid;
+        const docRef = doc(db, "users", uid);
+        await setDoc(docRef, {
             name: newName,
             experience: newExperience,
             game: newGame,
@@ -48,6 +32,7 @@ function SetUsers() {
             bio: newBio,
         })
     }
+
 
     return (
         <div className="myform">

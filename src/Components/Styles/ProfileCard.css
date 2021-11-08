@@ -1,6 +1,6 @@
 .main {
-    background-color: #feae96;
-background-image: linear-gradient(315deg, #f57895 0%, rgb(202, 69, 69) 74%);
+    background-color: hsl(0, 93%, 37%);;
+    background-image: black;
     border-radius: 5px;
     color:white;
     padding: 0px;
@@ -38,7 +38,7 @@ background-image: linear-gradient(315deg, #f57895 0%, rgb(202, 69, 69) 74%);
 .prof-container {
     margin: 10px;
     width: fit-content;
-    padding-top: 80px;
+    padding-top: 120px;
     
 }
 .name{

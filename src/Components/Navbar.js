@@ -11,7 +11,8 @@ function Navbar() {
             <b><Link to="/about">About</Link></b>
             <b><Link to="/contact">Contact</Link></b>
             <b><Link to="/login">Log In/Sign Up</Link></b>
-            <Link to="/contact"><img className= "avatar-class" src={avatar} alt="Avatar" /></Link>
+            <b><Link to="/users">Network</Link></b>
+            <Link to="/profile"><img className= "avatar-class" src={avatar} alt="Avatar" /></Link>
         </div>
     );
 };

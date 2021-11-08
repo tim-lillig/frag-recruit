@@ -11,6 +11,7 @@ import {
 import { auth } from './firebase.js'
 import './Styles/Login.css'
 import RegisterUser from './RegisterUser'
+import Home from './Home'
 
 function Login() {
 
@@ -52,6 +53,10 @@ function Login() {
     }
   }, [user]);
 
+  if (loggedIn) {
+    return <Home/>
+  } 
+
   return (
     <div>
       <div className="login-box">
@@ -76,10 +81,9 @@ function Login() {
         <h4 className = "dhatext">Dont have an account? <Link to="/register" className="registerbutton">Register here!</Link></h4>
       </div>
 
-      <h5> User Logged In: </h5>
-      {user?.email}
+      <h5 className="user-li"> User Logged In: {user?.email}</h5>
 
-      <button onClick={logout}> Sign Out </button>
+      <button className="sign-out" onClick={logout}> Sign Out </button>
     </div>
   );
         }
