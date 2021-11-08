@@ -10,6 +10,7 @@ import grenade from './Images/grenade.png';
 import celebration from './Images/celebration.jpeg';
 import gamer from './Images/gamer.png';
 import nodes from './Images/nodes.png'
+import testing from './testing'
 
 function Home() {
     return (
@@ -17,6 +18,7 @@ function Home() {
   <div className="text-block">
     <h1>GET RECRUITED
         <br/>
+        <testing/>
         <p className="paragraph">
           Connect with the top teams and players.
            <br></br>

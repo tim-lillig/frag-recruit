@@ -6,17 +6,20 @@ import Contact from './Components/Contact.js';
 import Login from './Components/Login';
 import { Route, Link } from 'react-router-dom';
 import Navbar from './Components/Navbar';
-import ProfilePage from './Components/ProfilePage';
+import ProfilePage from './Components/Profile';
 import film from './Components/film';
 import aboutuser from './Components/aboutuser';
 import SetUsers from './Components/SetUsers';
 import RegisterUser from './Components/RegisterUser';
 import GetUsers from './Components/GetUsers';
+import Testing from './Components/testing';
 
 function App() {
   return (
     <div className="App">
     <Navbar/>
+      <Route exact path="/testing" component={Testing} />
+      <Route exact path="/" component={Home} />
       <Route exact path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />

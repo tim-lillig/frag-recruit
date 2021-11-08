@@ -1,12 +1,35 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { db } from './firebase'
-import { collection, getDocs, addDoc } from 'firebase/firestore'
+import { collection, getDocs, addDoc, setDoc, doc } from 'firebase/firestore'
 import './Styles/SetUsers.css'
 import logo from "./Images/logo.png"
 import { Link } from 'react-router-dom';
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import Login from './Login';
 
 function SetUsers() {
+
+    const [id, setId] = useState("");
+
+    const auth = getAuth();
+
+    useEffect(() => {
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                // User is signed in, see docs for a list of available properties
+                // https://firebase.google.com/docs/reference/js/firebase.User
+                const uid = user.uid;
+                console.log(uid);
+                setId(uid);
+            }
+            });
+            
+    }, [])
+
+    console.log(id);
+
+    const userRef = doc(db, "users", id)
 
     const userCollectionRef = collection(db, "users")
 
@@ -17,7 +40,7 @@ function SetUsers() {
     const [newBio, setNewBio] = useState("");
 
     const createUser = async () =>  {
-        await addDoc(userCollectionRef, {
+        await setDoc(userRef, {
             name: newName,
             experience: newExperience,
             game: newGame,
