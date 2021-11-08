@@ -1,11 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
 
-  * { 
-    background-color: white;
-  }
-
   .container {
+    background-color: white ;
     position: relative;
     display:inline-block;
     width: auto;
@@ -18,7 +15,7 @@
     position: absolute;
     bottom: 1.25rem;
     right: 1.25rem;
-    color: black;
+    color: white;
     font-family: 'Share Tech', sans-serif;
     font-size: 1vw;
     text-align:left;
@@ -29,7 +26,7 @@
   }
 
  .paragraph {
-   color: black;
+   color: white;
    font-weight: lighter;
  }
 

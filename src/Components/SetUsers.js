@@ -31,27 +31,27 @@ function SetUsers() {
             <img src={logo} alt="logo" className="logo-img1" />
             <h1 className="register-heading">Register</h1>
             <div className="myform">
-            <label for="myform">Name </label>
-            <input placeholder="Name..." onChange={(event) => {setNewName(event.target.value)}}/>
+            <label className="labels" for="myform">Name </label>
+            <input className="inputs" placeholder="Name..." onChange={(event) => {setNewName(event.target.value)}}/>
             </div>
             <br></br>
             <div className="myform">
-            <label for="myform">Experience </label>
-            <input type="number" placeholder="Experience..." onChange={(event) => {setNewExperience(event.target.value)}}/>
+            <label className="labels" for="myform">Experience </label>
+            <input className="inputs" type="number" placeholder="Experience..." onChange={(event) => {setNewExperience(event.target.value)}}/>
             </div>
             <br></br>
             <div className="myform">
-            <label for="myform">Game </label>
-            <input placeholder="Game..." onChange={(event) => {setNewGame(event.target.value)}}/>
+            <label className="labels" for="myform">Game </label>
+            <input className="inputs" placeholder="Game..." onChange={(event) => {setNewGame(event.target.value)}}/>
             </div>
             <br></br>
             <div className="myform">
-            <label for="myform">Role </label>
-            <input placeholder="Role..." onChange={(event) => {setNewRole(event.target.value)}}/>
+            <label className="labels" for="myform">Role </label>
+            <input className="inputs" placeholder="Role..." onChange={(event) => {setNewRole(event.target.value)}}/>
             </div>
             <br></br>
             <div>
-            <label for="myform">Bio </label>
+            <label className="labels" for="myform">Bio </label>
             <textarea className="bio-input"placeholder="Bio..." onChange={(event) => {setNewBio(event.target.value)}}/>
             </div>
             <br></br>

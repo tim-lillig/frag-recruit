@@ -1,10 +1,62 @@
-@media all and (min-width: 480px) {
-    .Login {
-      padding: 60px 0;
-    }
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+
+
+.login-box {
+  width:750px;
+  height:300px;
+  border: 5px;
+  align-items: center;
+  border-style: solid;
+  border-color: #F03A47;
+  background-color: #121212;
+  margin: auto;
+
+}
+.email{
+  color:white;
+  border-color:#F03A47;
+  border-radius:15px;
+  border: 2px solid 1b3022;
+  height: 30px;
+  width: 200px;
+  margin-bottom: 10px;
   
-    .Login form {
-      margin: 0 auto;
-      max-width: 320px;
-    }
-  }
+}
+.pass{
+  color: white;
+  border-color:#F03A47;
+  border-radius:15px;
+  border: 2px solid 1b3022;
+  height: 30px;
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.emailandpass{
+  color: white;
+  text-align: right;
+  margin-right: 250px;
+  font-family: 'Share Tech', sans-serif;
+}
+
+.logintext{
+  color:white;
+  font-family: 'Share Tech', sans-serif;
+}
+.loginbutton{
+  background-color:white;
+  border-radius: 15px;
+  font-family: 'Share Tech', sans-serif;
+  height: 30px;
+  width: 100px;
+}
+
+.dhatext{
+  color: white;
+  font-family: 'Share Tech', sans-serif;
+}
+
+.registerbutton{
+  color: #F03A47;
+}

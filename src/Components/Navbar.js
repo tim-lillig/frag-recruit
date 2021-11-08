@@ -10,8 +10,7 @@ function Navbar() {
             <Link to="/"><img className= "logo1" src={logo} alt="Logo" /></Link>
             <b><Link to="/about">About</Link></b>
             <b><Link to="/contact">Contact</Link></b>
-            <b><Link to="/login">Login</Link></b>
-            <button className="signup-btn"><Link to="/signup">Signup</Link></button>
+            <b><Link to="/login">Log In/Sign Up</Link></b>
             <Link to="/contact"><img className= "avatar-class" src={avatar} alt="Avatar" /></Link>
         </div>
     );

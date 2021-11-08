@@ -1,9 +1,10 @@
 import React from 'react'
+import './Styles/About.css'
 
 function About() {
     return (
         <div>
-            <h1>About Page</h1>
+            <h1 className="about-text">About Page</h1>
         </div>
     )
 }

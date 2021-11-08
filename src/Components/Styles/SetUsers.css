@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
 
-input {
+.inputs {
     width: 10%;
     padding: 1.5vw 2vw;
     border: none;
@@ -13,7 +13,7 @@ input {
     left: 20vw;
   }
 
-  label {
+  .labels {
     font-family: 'Share Tech', sans-serif;
     padding: 1vw 3vw;
     font-size: 2vw;

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -8,6 +9,7 @@ import {
   signOut,
 } from "firebase/auth";
 import { auth } from './firebase.js'
+import './Styles/Login.css'
 
 function Login() {
 
@@ -40,26 +42,30 @@ function Login() {
   };
 
   return (
-    <div className="App">
-      <div>
-        <h3> Login </h3>
-        <input
-          placeholder="Email..."
+    <div>
+      <div className="login-box">
+        <h3 className="logintext"> User Log In </h3>
+        <div>
+        <h4 className = "emailandpass"> Email: <input className = "email"
           onChange={(event) => {
             setLoginEmail(event.target.value);
           }}
         />
-        <input
-          placeholder="Password..."
+        </h4>
+        </div>
+        <div>
+        <h4 className = "emailandpass"> Password: <input className="pass"
           onChange={(event) => {
             setLoginPassword(event.target.value);
           }}
         />
-
-        <button onClick={login}> Login</button>
+        </h4>
+        </div>
+        <button className = "loginbutton" onClick={login}> Login</button>
+        <h4 className = "dhatext">Dont have an account? <Link to="/register" className="registerbutton">Register here!</Link></h4>
       </div>
 
-      <h4> User Logged In: </h4>
+      <h5> User Logged In: </h5>
       {user?.email}
 
       <button onClick={logout}> Sign Out </button>
