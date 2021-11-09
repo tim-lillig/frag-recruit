@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -11,6 +11,7 @@ import { auth } from './firebase.js'
 import { Link } from 'react-router-dom'
 import './Styles/RegisterUser.css'
 import Home from './Home.js'
+import Profile from './Profile.js';
 
 function RegisterUser() {
 
@@ -38,6 +39,19 @@ function RegisterUser() {
       console.log(error.message);
     }
   };
+
+  const user1 = auth.currentUser;
+
+  useEffect(() => {
+    if (user1) {
+      setLoggedIn(true);
+    }
+  }, [user1]);
+
+  if (loggedIn) {
+    return <Profile/>
+  } 
+  
   
   return (
     <div className="register-box">

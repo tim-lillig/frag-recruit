@@ -12,6 +12,7 @@ import { auth } from './firebase.js'
 import './Styles/Login.css'
 import RegisterUser from './RegisterUser'
 import Home from './Home'
+import Profile from './Profile'
 
 function Login() {
 
@@ -54,7 +55,7 @@ function Login() {
   }, [user]);
 
   if (loggedIn) {
-    return <Home/>
+    return <Profile/>
   } 
 
   return (

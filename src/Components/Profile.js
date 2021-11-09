@@ -11,6 +11,8 @@ import './Styles/Profile.css'
 import Login from './Login.js'
 
 function Profile() {
+
+    
     const [name, setName] = useState("");
     const [game, setGame] = useState("");
     const [experience, setExperience] = useState(0);
@@ -21,11 +23,16 @@ function Profile() {
     const [id, setid] = useState(null);
 
     const auth = getAuth();
+    const user = auth.currentUser;
+    
+    console.log(user);
 
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {
             const getProfile = async () => {
                     if (user) {
+                        setLoggedIn(true);
+                        console.log(loggedIn);
                         const uid = user.uid;
                         const docRef = doc(db, "users", uid);
                         const docSnap = await getDoc(docRef);
@@ -34,30 +41,15 @@ function Profile() {
                         setExperience(docSnap.data().experience);
                         setRole(docSnap.data().role);
                         setBio(docSnap.data().bio);
-        
-                        if (docSnap.exists()) {
-                        console.log("Document data:", docSnap.data());
-                        } else {
-                        // doc.data() will be undefined in this case
-                        console.log("No such document!");
-                        }
                     }
                 }
                 getProfile();
             });         
     }, [])
 
-    const user = auth.currentUser;
-
-    useEffect(() => {
-        if (user) {
-          setLoggedIn(true);
-        }
-      }, [user]);
-    
-      if (!loggedIn) {
+    if (!loggedIn) {
         return <Login/>
-      } 
+      }
 
 
 
