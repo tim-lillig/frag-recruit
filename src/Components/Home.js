@@ -18,7 +18,6 @@ function Home() {
   <div className="text-block">
     <h1>GET RECRUITED
         <br/>
-        <testing/>
         <p className="paragraph">
           Connect with the top teams and players.
            <br></br>

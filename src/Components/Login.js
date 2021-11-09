@@ -54,9 +54,9 @@ function Login() {
     }
   }, [user]);
 
-  if (loggedIn) {
-    return <Profile/>
-  } 
+  //if (loggedIn) {
+    //return <Profile/>
+  //} 
 
   return (
     <div>

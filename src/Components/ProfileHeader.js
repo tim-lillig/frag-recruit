@@ -27,17 +27,13 @@ function ProfileHeader() {
                         const uid = user.uid;
                         const docRef = doc(db, "users", uid);
                         const docSnap = await getDoc(docRef);
+                        if (docSnap.exists()) {
                         setName(docSnap.data().name);
                         setGame(docSnap.data().game);
                         setExperience(docSnap.data().experience);
                         setRole(docSnap.data().role);
                         setBio(docSnap.data().bio);
         
-                        if (docSnap.exists()) {
-                        console.log("Document data:", docSnap.data());
-                        } else {
-                        // doc.data() will be undefined in this case
-                        console.log("No such document!");
                         }
                     }
                 }

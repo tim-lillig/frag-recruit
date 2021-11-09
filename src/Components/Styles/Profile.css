@@ -7,3 +7,8 @@
     background: transparent;
     right: 18vw;
 }
+
+.error {
+    color: white;
+    font-size: 10rem;
+}

@@ -4,7 +4,7 @@ import "./firebase.js"
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useState, useEffect } from 'react';
 import { db } from './firebase'
-import { collection, getDocs } from 'firebase/firestore'
+import { collection, getDocs} from 'firebase/firestore'
 import RegisterUser from './RegisterUser.js'
 import ProfileHeader from './ProfileHeader.js'
 import './Styles/Profile.css'
@@ -18,38 +18,44 @@ function Profile() {
     const [experience, setExperience] = useState(0);
     const [role, setRole] = useState("");
     const [bio, setBio] = useState("");
+    const [hasInfo, setHasInfo] = useState(false);
 
     const [loggedIn, setLoggedIn] = useState(false);
     const [id, setid] = useState(null);
 
     const auth = getAuth();
     const user = auth.currentUser;
-    
-    console.log(user);
 
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {
             const getProfile = async () => {
                     if (user) {
-                        setLoggedIn(true);
-                        console.log(loggedIn);
                         const uid = user.uid;
                         const docRef = doc(db, "users", uid);
                         const docSnap = await getDoc(docRef);
-                        setName(docSnap.data().name);
-                        setGame(docSnap.data().game);
-                        setExperience(docSnap.data().experience);
-                        setRole(docSnap.data().role);
-                        setBio(docSnap.data().bio);
+                        if (docSnap.exists()) {
+                            setHasInfo(true);
+                            const data = docSnap.data();
+                            setName(data.name);
+                            setGame(data.game);
+                            setExperience(data.experience);
+                            setRole(data.role);
+                            setBio(data.bio);
+                            setHasInfo(true);
+                        }
+                        else {
+                            return <RegisterUser />
+                        }
+                        
                     }
                 }
                 getProfile();
             });         
     }, [])
 
-    if (!loggedIn) {
-        return <Login/>
-      }
+    if (!hasInfo) {
+        return <h1 className="error">404 ERROR PLEASE REGISTER</h1>
+    }
 
 
 

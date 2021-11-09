@@ -59,4 +59,10 @@
 .user-row {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    padding-left: 0px;
+    padding-right: 0px;
+    justify-content: left;
+    justify-content: space-evenly;
 }
