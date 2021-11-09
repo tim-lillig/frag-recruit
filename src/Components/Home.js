@@ -27,8 +27,8 @@ function Home() {
             <br></br>
             we provide you with the connections you need.
             </p>
-        <button className="home-btn">I'M A TEAM</button>
-        <button className="home-btn2">I'M A RECRUIT</button>
+            <Link to="/register"><button className="home-btn">I'M A TEAM</button></Link>
+        <Link to="/register"><button className="home-btn2">I'M A RECRUIT</button></Link>
     </h1>
     <img className= "logo-img" src={nodes} alt="logo" />
   </div>

@@ -24,6 +24,11 @@
   font-size: 17px;
   font-family: 'Share Tech', sans-serif;
   background: transparent;
+  transition-duration: 0.2s;
+}
+.topnav b:hover {
+  background-color: grey; /* Green */
+    color: white;
 }
 
 .logo1 {
