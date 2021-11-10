@@ -32,7 +32,7 @@
 
   .home-btn {
     transition-duration: 0.2s;
-  background-color: darkred;
+  background-color: #F03A47;
   color: white;
   padding: .5vw 1vw;
   text-align: center;
@@ -57,7 +57,7 @@
 
   .home-btn2 {
     transition-duration: 0.2s;
-    background-color: darkred;
+    background-color: #F03A47;
   color: white;
   padding: .5vw 1vw;
   text-align: center;

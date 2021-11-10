@@ -1,5 +1,5 @@
 .main {
-    background-color: hsl(0, 93%, 37%);;
+    background-color: #F03A47;
     background-image: black;
     border-radius: 5px;
     color:white;
@@ -12,7 +12,7 @@
     font-family: 'Share Tech', sans-serif;
 }
 .box:hover {
-    background: linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%);
+    background: linear-gradient(45deg, #F03A47 30%, #FF8E53 90%);
     border-radius: 5px;
     color:white;
     height: 250px;

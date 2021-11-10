@@ -1,11 +1,28 @@
 .about-section {
-    color: white;
+    width:1000px;
+    height:800px;
+    border: 5px;
+    border-radius: 15px;
+    align-items: center;
+    border-style: solid;
+    border-color: #F03A47;
+    background-color: #121212;
+    margin: auto;
 }
 
 .info {
-    position: relative;
+    position:relative;
+    padding-bottom: 50px;
+    color: white;
+    font-family: 'Share Tech', sans-serif;
     background: transparent;
-    right: 18vw;
+}
+
+.about-text{
+    color: white;
+    font-family: 'Share Tech', sans-serif;
+    font-size: 3rem;
+    padding: 20px;
 }
 
 .error {

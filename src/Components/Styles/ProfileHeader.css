@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
-
 /* The side navigation menu */
 .sidebar {
     margin: 0;
@@ -25,8 +23,8 @@
   
   /* Active/current link */
   .sidebar a.active {
-    background-color: darkred;
-    color: rgb(134, 129, 129);
+    background-color: #F03A47;
+    color: white;
   }
   
   /* Links on mouse-over */
