@@ -8,6 +8,7 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 import "./firebase.js"
 import Login from './Login';
 import { doc, getDoc } from 'firebase/firestore';
+import {useHistory} from 'react-router-dom';
 
 function GetUsers() {
     const [loggedIn, setLoggedIn] = useState(false);
@@ -15,6 +16,8 @@ function GetUsers() {
     const userCollectionRef = collection(db, "users")
     const [name, setName] = useState("")
     const [userid, setuserId] = useState("")
+
+    const history = useHistory();
 
     const auth = getAuth();
 
@@ -24,7 +27,6 @@ function GetUsers() {
                 const uid = user.uid;
                 setLoggedIn(true);
                 setuserId(uid);
-                console.log(userid);
             }
             });
     }, [])

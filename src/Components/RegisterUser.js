@@ -12,6 +12,7 @@ import { Link } from 'react-router-dom'
 import './Styles/RegisterUser.css'
 import Home from './Home.js'
 import Profile from './Profile.js';
+import { useHistory } from "react-router-dom";
 
 function RegisterUser() {
 
@@ -41,6 +42,7 @@ function RegisterUser() {
   };
 
   const user1 = auth.currentUser;
+  let history = useHistory();
 
   useEffect(() => {
     if (user1) {
@@ -49,7 +51,7 @@ function RegisterUser() {
   }, [user1]);
 
   if (loggedIn) {
-    return <Profile/>
+    history.push("/profile");
   } 
   
   

@@ -8,8 +8,8 @@
     width: auto;
     display: grid;
     height: 100%;
+    
   }
-  
   /* Bottom right text */
   .text-block {
     position: absolute;
@@ -79,9 +79,10 @@
     .logo-img {
       position: relative;
       left: 45vw;
-      bottom: 20vw;
+      bottom: 84vw;
       height: 100%;
       height: 30vw;
+      background: transparent;
     }
 
     .celebration-img {
@@ -95,4 +96,39 @@
       background: transparent;
     }
 
+    .liquid {
+      height:150px;
+      position: relative;
+      bottom: -15vw;
+    }
+
+    .connectwith {
+      position: relative;
+      left: 24vw;
+      font-size: 4vw;
+      top: 10vw;
+      font-family: 'Share Tech', sans-serif;
+    }
+
+    .logo-row {
+      position: relative;
+      top: -5vw;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-left: 15vw;
+      padding-right: 15vw;
+    }
+
+    .create {
+      position: relative;
+      top:15vw;
+    }
+
+    .stock {
+      height: 26vw;
+      position: relative;
+      left: 55vw;
+      bottom: 20vw;
+    }
 

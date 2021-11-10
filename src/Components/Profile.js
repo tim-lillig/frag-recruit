@@ -9,6 +9,7 @@ import RegisterUser from './RegisterUser.js'
 import ProfileHeader from './ProfileHeader.js'
 import './Styles/Profile.css'
 import Login from './Login.js'
+import { useHistory } from 'react-router-dom';
 
 function Profile() {
 
@@ -25,11 +26,13 @@ function Profile() {
 
     const auth = getAuth();
     const user = auth.currentUser;
+    let history = useHistory();
 
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {
             const getProfile = async () => {
                     if (user) {
+                        setLoggedIn(true);
                         const uid = user.uid;
                         const docRef = doc(db, "users", uid);
                         const docSnap = await getDoc(docRef);
@@ -41,10 +44,6 @@ function Profile() {
                             setExperience(data.experience);
                             setRole(data.role);
                             setBio(data.bio);
-                            setHasInfo(true);
-                        }
-                        else {
-                            return <RegisterUser />
                         }
                         
                     }
@@ -53,11 +52,7 @@ function Profile() {
             });         
     }, [])
 
-    if (!hasInfo) {
-        return <h1 className="error">404 ERROR PLEASE REGISTER</h1>
-    }
-
-
+    console.log(loggedIn);
 
     return (
         <div className="about-section">
