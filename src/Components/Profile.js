@@ -53,9 +53,6 @@ function Profile() {
             });         
     }, [])
 
-    if (!hasInfo) {
-        return <h1 className="error">404 ERROR PLEASE REGISTER</h1>
-    }
 
 
 

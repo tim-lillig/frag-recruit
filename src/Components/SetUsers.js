@@ -30,6 +30,7 @@ function SetUsers() {
             game: newGame,
             role: newRole,
             bio: newBio,
+            friends: [""],
         })
     }
 
