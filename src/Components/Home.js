@@ -26,11 +26,11 @@ function Home() {
         <p className="paragraph">
           Connect with the top teams and players.
            <br></br>
-           Weither you are looking for a team to have fun
+           Whether you are looking for a team to have fun with
            <br></br>
            or are looking for a team to compete in a tournament,
             <br></br>
-            we provide you with the connections you need.
+            we aim to provide you with the connections you need.
             </p>
             <Link to="/register"><button className="home-btn">I'M A TEAM</button></Link>
         <Link to="/register"><button className="home-btn2">I'M A RECRUIT</button></Link>

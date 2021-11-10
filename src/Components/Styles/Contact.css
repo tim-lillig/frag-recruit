@@ -1,3 +1,78 @@
+
 .contpagetext{
     color: white;
+    font-family: 'Share Tech', sans-serif;
+}
+
+.about-tim {
+    width:1000px;
+    height:350px;
+    border: 5px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: #F03A47;
+    background-color: #121212;
+    margin: auto;
+}
+.about-nick {
+    width:1000px;
+    height:350px;
+    border: 5px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: #F03A47;
+    background-color: #121212;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.pic-of-us{
+    float: left;
+    margin-left: 50px;
+    margin-top: 25px;
+    height: 100%;
+    height: 10vw;
+    border-radius: 50%;
+    border: solid white 2px;
+}
+
+.our-text{
+    color: white;
+    font-family: 'Share Tech', sans-serif;
+}
+
+.tim-name{
+    position: fixed;
+    color: white;
+    font-family: 'Share Tech', sans-serif;
+    float: left;
+    margin-top: 250px;
+    margin-left:95px;
+}
+#tim-github{
+    position: relative;
+    color: white;
+    font-family: 'Share Tech', sans-serif;
+    float: left;
+    left: -115px;
+    top: 290px;
+}
+
+.nick-name{
+    position: fixed;
+    color: white;
+    font-family: 'Share Tech', sans-serif;
+    float: left;
+    margin-top: 250px;
+    margin-left:75px;
+}
+
+#nick-github{
+    position: relative;
+    color: white;
+    font-family: 'Share Tech', sans-serif;
+    float: left;
+    left: -120px;
+    top: 290px;
 }

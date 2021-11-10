@@ -8,6 +8,7 @@
     width: auto;
     display: grid;
     height: 100%;
+    width: 70%;
     
   }
   /* Bottom right text */
@@ -19,7 +20,6 @@
     font-family: 'Share Tech', sans-serif;
     font-size: 1vw;
     text-align:left;
-    padding-left: 0;
     left:5rem; top:1.25rem;
     height: 100%;
     font-weight: bolder;
@@ -32,7 +32,7 @@
 
   .home-btn {
     transition-duration: 0.2s;
-  background-color: darkred;
+  background-color: #F03A47;
   color: white;
   padding: .5vw 1vw;
   text-align: center;
@@ -57,7 +57,7 @@
 
   .home-btn2 {
     transition-duration: 0.2s;
-    background-color: darkred;
+    background-color: #F03A47;
   color: white;
   padding: .5vw 1vw;
   text-align: center;
@@ -97,9 +97,11 @@
     }
 
     .liquid {
-      height:150px;
+      height:6vw;
       position: relative;
       bottom: -15vw;
+      padding-left: 5vw;
+      padding-right: 9vw;
     }
 
     .connectwith {
@@ -116,13 +118,14 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      padding-left: 15vw;
+      padding-left: 5vw;
       padding-right: 15vw;
     }
 
     .create {
       position: relative;
       top:15vw;
+      width: 100%;
     }
 
     .stock {

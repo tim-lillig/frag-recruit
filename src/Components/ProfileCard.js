@@ -12,7 +12,6 @@ function ProfileCard(props){
             <img className='img-box' src={Logo} alt="profile-img"/>
             <h2 className='name'>{ props.name }</h2>
             <h3 className='des'>{ props.game }</h3>
-            
         </div>
         </div>
     );
