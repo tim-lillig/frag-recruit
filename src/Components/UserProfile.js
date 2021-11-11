@@ -1,10 +1,13 @@
 import React from 'react'
 import ProfileHeader from './ProfileHeader'
+import Sidebar from './Sidebar'
 
 function UserProfile(props) {
     return (
         <div className="big-about">
-            <ProfileHeader />
+            <Sidebar
+                {...props}
+             />
             <div className="about-section">
                 <h1 className="about-text"> About: </h1>
                 <h1 className="info">Name: {props.name}</h1>

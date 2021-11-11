@@ -10,6 +10,7 @@ import ProfileHeader from './ProfileHeader.js'
 import './Styles/Profile.css'
 import Login from './Login.js'
 import { useHistory } from 'react-router-dom';
+import Sidebar from './Sidebar.js'
 
 function Profile() {
 

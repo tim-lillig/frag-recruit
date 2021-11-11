@@ -1,33 +1,20 @@
 import React from 'react'
 import ProfileHeader from './ProfileHeader'
 import './firebase'
-import {useState} from 'react'
-import { getStorage, ref, uploadBytes } from "firebase/storage";
+import ReactPlayer from 'react-player'
+import './Styles/Film.css'
+import Sidebar from './Sidebar'
 
 function Film() {
 
-    const storage = getStorage();
-
-    const [image , setImage] = useState('');
-    const upload = ()=>{
-        if(image == null)
-            return;
-        ref(storage, `/images/${image.name}`).then(
-            uploadBytes(storage, image, {contentType: image.type})
-        ).then(
-            (snapshot)=>{
-                console.log(snapshot);
-            }
-        )
-    }
-
     return (
         <div>
-            <ProfileHeader />
-            <center>
-            <input type="file" onChange={(e)=>{setImage(e.target.files[0])}}/>
-            <button onClick={upload}>Upload</button>
-            </center>
+            <ProfileHeader
+             />
+            <div className="video-player">
+            <ReactPlayer className='video' url='https://www.youtube.com/watch?v=TN2XwlMylQg'/>
+            <ReactPlayer className='video' url='https://www.youtube.com/watch?v=jIDC7asItJQ'/>
+            </div>
     </div>
     )
 }

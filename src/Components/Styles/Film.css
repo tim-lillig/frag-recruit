@@ -1,0 +1,16 @@
+.video-player {
+    display: flex;
+    flex-direction: row;
+    padding-left: 15vw;
+    justify-content: space-between;
+    padding-right: 10vw;
+    padding-top: 5vw;
+}
+
+.video {
+    border-radius: 8px;
+    border: 6px;
+    align-items: center;
+    border-style: solid;
+    border-color: #F03A47;
+}

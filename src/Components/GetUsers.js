@@ -80,16 +80,6 @@ function GetUsers() {
         })
     }
 
-    const getFriends = async (place) => {
-        console.log(place)
-        const ref = doc(db, "users", place);
-        const docInfo = await getDoc(ref)
-        //setProfileName(docInfo.data().name);
-        //console.log(profileName)
-        setGotProfile(true);
-        setProfileName(user.name);
-    }
-
     console.log(profileName)
 
     const renderUsers = (userName, game, experience, role, bio ) => {
@@ -99,8 +89,7 @@ function GetUsers() {
                setExperience(experience),
                setRole(role),
                setBio(bio),
-               setGotProfile(true),
-               console.log(gotProfile)
+               setGotProfile(true)
         )
     }
 
