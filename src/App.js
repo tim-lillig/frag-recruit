@@ -25,7 +25,6 @@ function App() {
       <Route exact path="/testing" component={Testing} />
       <Route exact path="/" component={Home} />
       <Route exact path="/" component={Home} />
-      <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
       <Route path="/login" component={Login} />
       <Route path="/profile" component={ProfilePage} />

@@ -10,6 +10,8 @@ import Login from './Login';
 import {useHistory} from 'react-router-dom';
 
 import { doc, getDoc, setDoc, arrayUnion,updateDoc } from 'firebase/firestore';
+import UserProfile from './UserProfile';
+
 
 function GetUsers() {
     const [loggedIn, setLoggedIn] = useState(false);
@@ -17,7 +19,24 @@ function GetUsers() {
     const userCollectionRef = collection(db, "users")
     const [name, setName] = useState("")
     const [userid, setuserId] = useState("")
-    const [index, setIndex] = useState(0)
+    const [friendId, setFriendId] = useState("");
+    const [gotProfile, setGotProfile] = useState(false);
+
+    const [profileName, setProfileName] = useState("");
+
+
+
+
+
+    const [Username, setUsername] = useState("");
+    const [role, setRole] = useState("");
+    const [game, setGame] = useState("");
+    const [experience, setExperience] = useState(0);
+    const [bio, setBio] = useState("");
+
+
+
+
 
     const history = useHistory();
 
@@ -61,6 +80,42 @@ function GetUsers() {
         })
     }
 
+    const getFriends = async (place) => {
+        console.log(place)
+        const ref = doc(db, "users", place);
+        const docInfo = await getDoc(ref)
+        //setProfileName(docInfo.data().name);
+        //console.log(profileName)
+        setGotProfile(true);
+        setProfileName(user.name);
+    }
+
+    console.log(profileName)
+
+    const renderUsers = (userName, game, experience, role, bio ) => {
+        return (
+               setUsername(userName),
+               setGame(game),
+               setExperience(experience),
+               setRole(role),
+               setBio(bio),
+               setGotProfile(true),
+               console.log(gotProfile)
+        )
+    }
+
+
+    if (gotProfile) {
+        return (
+            <div>
+                <UserProfile name={Username} game={game} experience={experience} role={role} bio={bio} />
+            </div>
+        )
+    }
+
+
+
+
 
     return (
         <div className="user-row">
@@ -73,6 +128,7 @@ function GetUsers() {
                         name={user.name}
                         game={user.game}
                     />
+                    <button  onClick={() => renderUsers(user.name,user.game,user.experience, user.role, user.bio)}>{user.id}</button>
                 </div>
                 );
         })}
