@@ -15,6 +15,8 @@ import GetUsers from './Components/GetUsers';
 import Testing from './Components/testing';
 import Profile from './Components/Profile';
 import Friends from './Components/Friends';
+import TeamInfo from './Components/TeamInfo';
+import Teams from './Components/Teams';
 
 function App() {
   return (
@@ -33,6 +35,8 @@ function App() {
       <Route path="/register-info" component={SetUsers} />
       <Route path="/register" component={RegisterUser} />
       <Route path="/users" component={GetUsers} />
+      <Route path="/team-info" component={TeamInfo} />
+      <Route path="/teams" component={Teams} />
     </div>
   );
 }

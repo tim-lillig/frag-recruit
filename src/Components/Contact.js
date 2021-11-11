@@ -22,13 +22,24 @@ function Contact() {
 
             <div className = "about-nick">
             <div className="img-box-us">
-                <img className= "pic-of-us" src={scream} alt="Scream" />
+                <img className= "pic-of-us" src="https://media-exp1.licdn.com/dms/image/C4E03AQGPwcxf9zJOsw/profile-displayphoto-shrink_800_800/0/1621448810642?e=1642032000&v=beta&t=jcbM81u6TiGQaPi_D7gB450IKuU3SPnJEenvKFXTi-o" alt="Scream" />
                 <h1 className="nick-name"> Nick Hansel</h1>
             </div> 
             <div>
                 <a id="nick-github" href="https://github.com/fr1gid">github</a>
                 </div> 
-            <h1 className="our-text"> test text</h1>
+            <h1 className="our-text">
+            About me
+            <br></br>
+            <br></br>
+            Hello my name is Nick and
+            I am a Computer Science
+            Student at the University of
+            Iowa. I am a full-stack developer
+            specializing in back end and mobile
+            development. I really just want to
+            make some cool stuff!
+            </h1>
             </div>
         </div>
     )

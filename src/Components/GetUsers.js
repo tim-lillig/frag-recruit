@@ -69,10 +69,10 @@ function GetUsers() {
                 <div>
                     {" "}
                     <ProfileCard
+                        url="https://thedefiant.io/wp-content/uploads/2021/01/Screen-Shot-2021-01-13-at-12.39.11-PM.png"
                         name={user.name}
                         game={user.game}
                     />
-                    <button className="add-friend" onClick={() => addFriend(user.id)}>Add Friend</button>
                 </div>
                 );
         })}
