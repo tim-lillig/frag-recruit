@@ -76,3 +76,11 @@
     left: -120px;
     top: 290px;
 }
+
+.tim-text{
+    color: white;
+    font-family: 'Share Tech', sans-serif;
+    text-align: center;
+    margin-left:100px;
+    width: 900px;
+}

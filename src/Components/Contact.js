@@ -16,7 +16,18 @@ function Contact() {
                 <div>
                     <a id="tim-github" href="https://github.com/timlil">github</a>
                 </div> 
-            <h1 className="our-text" > test text</h1>
+                <h1 className="tim-text">
+            About me
+            <br></br>
+            <br></br>
+            Hi! my name is Tim, I am a
+            CS student at the University of Iowa.
+            I've been a gamer almost all of my life
+            and have always been a big fan of esports!
+            It has been great to work on something 
+            that could benefit esports community while
+            working on my skills as a coder and artist.
+            </h1>
             </div>
             
 

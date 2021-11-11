@@ -1,3 +1,50 @@
+#big-boy{
+    width:1000px;
+    height:800px;
+    border: 5px;
+    border-radius: 15px;
+    align-items: center;
+    border-style: solid;
+    border-color: #F03A47;
+    background-color: #121212;
+    margin: auto;
+}
+
 .about-text{
     color: white;
+    position: relative;
+    
+}
+
+.blue1{
+    position: relative;
+    top: -7vw;
+    left:-15vw;
+
+}
+
+.blue2{
+    position: relative;
+    top: -7vw;
+    right:-15vw;
+
+}
+
+#abt-header{
+    color: white;
+    background: transparent;
+    position: relative;
+    top:-12vw;
+    left:11vw;
+    width: 580px;
+    font-family: 'Share Tech', sans-serif;
+}
+
+#abt-txt{
+    font-family: 'Share Tech', sans-serif;
+    position: relative;
+    color: white;
+    font-size: 250%;
+    top:-10vw;
+    margin: 2vw;;
 }
