@@ -113,7 +113,7 @@ function GetUsers() {
                 <div>
                     {" "}
                     <ProfileCard
-                        url="https://thedefiant.io/wp-content/uploads/2021/01/Screen-Shot-2021-01-13-at-12.39.11-PM.png"
+                        url={user.url}
                         name={user.name}
                         game={user.game}
                     />
