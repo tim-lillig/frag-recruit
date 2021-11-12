@@ -36,6 +36,7 @@ function App() {
       <Route path="/users" component={GetUsers} />
       <Route path="/team-info" component={TeamInfo} />
       <Route path="/teams" component={Teams} />
+      <Route path="/about" component={About} />
     </div>
   );
 }
