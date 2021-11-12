@@ -15,6 +15,7 @@ function UserProfile(props) {
                 <h1 className="info">Experience: {props.experience} years</h1>
                 <h1 className="info">Role: {props.role}</h1>
                 <h1 className="info">Bio: {props.bio}</h1>
+                <h1 className="info">Email: {props.email}</h1>
             </div>
         </div>
     )

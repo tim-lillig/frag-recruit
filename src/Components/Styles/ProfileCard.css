@@ -76,3 +76,10 @@
     position: relative;
     top: -2.6vw;
 }
+
+.profile-btn {
+    background-color: white;
+    color: black;
+    font-family: 'Share Tech', sans-serif;
+    position: relative;
+}

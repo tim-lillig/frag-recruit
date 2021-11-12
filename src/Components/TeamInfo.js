@@ -18,6 +18,7 @@ function TeamInfo() {
     const [newGame, setNewGame] = useState("");
     const [newDes, setnewDes] = useState("");
     const [newNeeded, setNewNeeded] = useState("");
+    const [email, setEmail] = useState("");
 
     const user = auth.currentUser;
 
@@ -29,6 +30,7 @@ function TeamInfo() {
             game: newGame,
             des: newDes,
             needed: newNeeded,
+            email: email,
         })
     }
 

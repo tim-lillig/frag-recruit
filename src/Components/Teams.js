@@ -99,7 +99,7 @@ function Teams() {
                         game={user.game}
                         des={user.des}
                     />
-                    <button  onClick={() => renderTeams(user.des,user.game,user.name, user.needed, user.url)}>{user.id}</button>
+                    <button className="profile-btn"  onClick={() => renderTeams(user.des,user.game,user.name, user.needed, user.url)}>Profile</button>
                 </div>
                 );
         })}

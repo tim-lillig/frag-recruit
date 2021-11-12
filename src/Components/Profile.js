@@ -22,6 +22,7 @@ function Profile() {
     const [experience, setExperience] = useState(0);
     const [role, setRole] = useState("");
     const [bio, setBio] = useState("");
+    const [userEmail, setUserEmail] = useState("");
 
     const auth = getAuth();
     const user = auth.currentUser;
@@ -45,6 +46,7 @@ function Profile() {
         onAuthStateChanged(auth, (user) => {
             const getProfile = async () => {
                     if (user) {
+                        setUserEmail(user.email)
                         setLoggedIn(true);
                         const uid = user.uid;
                         const docRef = doc(db, "users", uid);
@@ -82,6 +84,7 @@ function Profile() {
                 <h1 className="info">Experience: {experience} years</h1>
                 <h1 className="info">Role: {role}</h1>
                 <h1 className="info">Bio: {bio}</h1>
+                <h1 className="info">Email: {userEmail}</h1>
             </div>
         </div>
     )

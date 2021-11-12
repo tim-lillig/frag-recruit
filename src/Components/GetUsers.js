@@ -34,6 +34,7 @@ function GetUsers() {
     const [experience, setExperience] = useState(0);
     const [bio, setBio] = useState("");
 
+    const [email, setEmail] = useState("");
 
 
 
@@ -80,15 +81,14 @@ function GetUsers() {
         })
     }
 
-    console.log(profileName)
-
-    const renderUsers = (userName, game, experience, role, bio ) => {
+    const renderUsers = (userName, game, experience, role, bio, newEmail ) => {
         return (
                setUsername(userName),
                setGame(game),
                setExperience(experience),
                setRole(role),
                setBio(bio),
+               setEmail(newEmail),
                setGotProfile(true)
         )
     }
@@ -97,7 +97,7 @@ function GetUsers() {
     if (gotProfile) {
         return (
             <div>
-                <UserProfile name={Username} game={game} experience={experience} role={role} bio={bio} />
+                <UserProfile name={Username} game={game} experience={experience} role={role} bio={bio} email={email} />
             </div>
         )
     }
@@ -117,7 +117,7 @@ function GetUsers() {
                         name={user.name}
                         game={user.game}
                     />
-                    <button  onClick={() => renderUsers(user.name,user.game,user.experience, user.role, user.bio)}>{user.id}</button>
+                    <button  className="profile-btn" onClick={() => renderUsers(user.name,user.game,user.experience, user.role, user.bio, user.email)}>Profile</button>
                 </div>
                 );
         })}

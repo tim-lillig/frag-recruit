@@ -52,7 +52,6 @@ function ProfileHeader() {
             <br></br>
             <a class="active" href="/profile/about">About</a>
             <a href="/profile-film">Film</a>
-            <a href="/profile-friends">Friends</a>
         </div>
     );
 };
