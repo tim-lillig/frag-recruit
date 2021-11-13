@@ -26,6 +26,7 @@ function Teams() {
     const [needed, setNeeded] = useState("")
     const [url, setUrl] = useState("")
     const [game, setGame] = useState("")
+    const [userEmail, setUserEmail] = useState("")
     const [gotProfile, setGotProfile] = useState(false)
 
 
@@ -61,13 +62,15 @@ function Teams() {
         )
     }
 
-    const renderTeams = (des, game, teamName, needed, link) => {
+    const renderTeams = (des, game, teamName, needed, link, email) => {
         return (
             setUsername(teamName),
             setDes(des),
             setGame(game),
             setNeeded(needed),
             setUrl(link),
+            setUserEmail(email),
+            console.log(email),
             setGotProfile(true)
         )
     }
@@ -81,6 +84,7 @@ function Teams() {
                 game={game}
                 needed={needed}
                 url={url}
+                email={userEmail}
             />
         );
     };
@@ -99,7 +103,7 @@ function Teams() {
                         game={user.game}
                         des={user.des}
                     />
-                    <button className="profile-btn"  onClick={() => renderTeams(user.des,user.game,user.name, user.needed, user.url)}>Profile</button>
+                    <button className="profile-btn"  onClick={() => renderTeams(user.des,user.game,user.name, user.needed, user.url, user.email)}>Profile</button>
                 </div>
                 );
         })}

@@ -15,6 +15,7 @@
 
   .labels {
     font-family: 'Share Tech', sans-serif;
+    color: white;
     padding: 1vw 3vw;
     font-size: 2vw;
     display: inline-block;
@@ -38,7 +39,7 @@
     font-family: 'Share Tech', sans-serif;
     position: relative;
     right: 19.3vw;
-    top: 20vw;
+    top: 22vw;
   }
 
   .bio-input {
@@ -63,6 +64,7 @@
 
   .register-heading {
     font-family: 'Share Tech', sans-serif;
+    color: white;
     font-weight: bolder;
     font-size: 2vw;
   }

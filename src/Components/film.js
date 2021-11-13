@@ -5,15 +5,14 @@ import ReactPlayer from 'react-player'
 import './Styles/Film.css'
 import Sidebar from './Sidebar'
 
-function Film() {
+function Film(props) {
 
     return (
         <div>
             <ProfileHeader
              />
             <div className="video-player">
-            <ReactPlayer className='video' url='https://www.youtube.com/watch?v=TN2XwlMylQg'/>
-            <ReactPlayer className='video' url='https://www.youtube.com/watch?v=jIDC7asItJQ'/>
+            <ReactPlayer className='video' url={props.vid}/>
             </div>
     </div>
     )

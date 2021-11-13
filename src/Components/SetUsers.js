@@ -18,11 +18,13 @@ function SetUsers() {
     const [newGame, setNewGame] = useState("");
     const [newRole, setNewRole] = useState("");
     const [newBio, setNewBio] = useState("");
+    const [newUrl, setNewUrl] = useState("");
 
     const user = auth.currentUser;
 
     const createUser = async () =>  {
-        const uid = user.uid;
+        if (user) {
+          const uid = user.uid;
         const docRef = doc(db, "users", uid);
         await setDoc(docRef, {
             name: newName,
@@ -31,7 +33,9 @@ function SetUsers() {
             role: newRole,
             bio: newBio,
             friends: [""],
+            url: newUrl,
         })
+        }
     }
 
 
@@ -57,6 +61,11 @@ function SetUsers() {
             <div className="myform">
             <label className="labels" for="myform">Role </label>
             <input className="inputs" placeholder="Role..." onChange={(event) => {setNewRole(event.target.value)}}/>
+            </div>
+            <br></br>
+            <div>
+            <label className="labels" for="myform">Profile Picture URL </label>
+            <input className="inputs"placeholder="Profile Picture URL..." onChange={(event) => {setNewUrl(event.target.value)}}/>
             </div>
             <br></br>
             <div>

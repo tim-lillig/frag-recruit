@@ -4,7 +4,7 @@ import scream from './Images/scream.jpeg'
 function Sidebar(props) {
     return (
             <div class="sidebar">
-            <img className= "scream-img" src={scream} alt="Scream" />
+            <img className= "scream-img" src={props.url} alt="Scream" />
             <h1 className="username">{props.name}</h1>
             <h2 className="bio">{props.bio}</h2>
             <br></br>

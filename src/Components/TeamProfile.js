@@ -14,6 +14,7 @@ function TeamProfile(props) {
                 <h1 className="info">Designation: {props.des}</h1>
                 <h1 className="info">Game: {props.game}</h1>
                 <h1 className="info">Role-Needed: {props.needed}</h1>
+                <h1 className="info">Email: {props.email}</h1>
             </div>
         </div>
     )

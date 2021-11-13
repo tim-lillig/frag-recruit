@@ -11,8 +11,9 @@ import './Styles/Profile.css'
 import Login from './Login.js'
 import { useHistory } from 'react-router-dom';
 import Sidebar from './Sidebar.js'
+import ReactPlayer from 'react-player'
 
-function Profile() {
+function Profile(props) {
 
     const [loggedIn, setLoggedIn] = useState(false);
     const [userid, setuserId] = useState("")
@@ -23,6 +24,10 @@ function Profile() {
     const [role, setRole] = useState("");
     const [bio, setBio] = useState("");
     const [userEmail, setUserEmail] = useState("");
+    const [profileUrl, setProfileUrl] = useState("");
+    const userCollectionRef = collection(db, "users")
+    const [videos, setVideos] = useState("");
+    const [vids, setVids] = useState("");
 
     const auth = getAuth();
     const user = auth.currentUser;
@@ -58,15 +63,13 @@ function Profile() {
                             setExperience(data.experience);
                             setRole(data.role);
                             setBio(data.bio);
+                            setProfileUrl(data.url)
                         }
                     }
                 }
                 getProfile();
             });         
     }, [])
-
-
-    console.log(loggedIn);
 
 
 
@@ -76,7 +79,12 @@ function Profile() {
 
     return (
         <div className="big-about">
-            <ProfileHeader />
+            <Sidebar
+            name = {name}
+            game = {game}
+            bio = {bio}
+            url = {profileUrl}
+            />
             <div className="about-section">
                 <h1 className="about-text"> About: </h1>
                 <h1 className="info">Name: {name}</h1>
@@ -86,7 +94,13 @@ function Profile() {
                 <h1 className="info">Bio: {bio}</h1>
                 <h1 className="info">Email: {userEmail}</h1>
             </div>
+            <div className="video-player">
+            <ReactPlayer className='video' url='https://www.youtube.com/watch?v=TN2XwlMylQg'/>
+            <ReactPlayer className='video' url='https://www.youtube.com/watch?v=jIDC7asItJQ'/>
+            </div>
         </div>
+        
+        
     )
 }
 

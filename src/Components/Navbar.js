@@ -1,10 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import "./Styles/Navbar.css"
-import logo from "./Images/logo.png"
-import avatar from "./Images/avatar.jpg"
+import "./Styles/Navbar.css";
+import logo from "./Images/logo.png";
+import avatar from "./Images/avatar.jpg";
+import { useEffect, useState } from 'react';
+import { getDoc, collection, doc } from '@firebase/firestore';
+import { db } from './firebase'
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { auth } from './firebase'
 
 function Navbar() {
+    
     return (
         <div class="topnav">
             <Link to="/"><img className= "logo1" src={logo} alt="Logo" /></Link>
