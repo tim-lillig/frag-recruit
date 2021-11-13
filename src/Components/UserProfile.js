@@ -21,6 +21,7 @@ function UserProfile(props) {
             <div className="video-player">
             <ReactPlayer className='video' url='https://www.youtube.com/watch?v=TN2XwlMylQg'/>
             <ReactPlayer className='video' url='https://www.youtube.com/watch?v=jIDC7asItJQ'/>
+            <br></br>
             </div>
         </div>
     )

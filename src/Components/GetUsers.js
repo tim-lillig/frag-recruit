@@ -9,7 +9,7 @@ import "./firebase.js"
 import Login from './Login';
 import {useHistory} from 'react-router-dom';
 
-import { doc, getDoc, setDoc, arrayUnion,updateDoc } from 'firebase/firestore';
+import { doc, getDoc, setDoc, arrayUnion, updateDoc } from 'firebase/firestore';
 import UserProfile from './UserProfile';
 
 
@@ -21,7 +21,7 @@ function GetUsers() {
     const [userid, setuserId] = useState("")
     const [friendId, setFriendId] = useState("");
     const [gotProfile, setGotProfile] = useState(false);
-
+    
     const [profileName, setProfileName] = useState("");
 
 
